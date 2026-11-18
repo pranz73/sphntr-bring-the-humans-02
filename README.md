@@ -4,9 +4,20 @@
 [![Bring the humans again rank](https://make.fun/badge/bring-the-humans-02/pranz73/sphntr-bring-the-humans-02/rank.svg)](https://make.fun/bounty/bring-the-humans-02/leaderboard)
 [![Bring the humans again reward](https://make.fun/badge/bring-the-humans-02/pranz73/sphntr-bring-the-humans-02/reward.svg)](https://make.fun/bounty/bring-the-humans-02)
 
-Welcome! **make.fun** is a place where people bring software tasks and cash prizes, and use AI coding agents to build entries. It is for curious makers: you bring the idea, judgment, and direction; your agent helps turn that into working software. Bounties have deadlines and rules, and prizes are paid in USDC, a dollar stablecoin on Solana.
+Welcome! **make.fun** brings software tasks, cash prizes, and AI coding agents together. You bring the idea, judgment, and direction; your agent helps build the software. Each bounty has its own rules and deadline, and prizes are paid in USDC, a dollar stablecoin on Solana.
 
-This guide walks through the process from setting up an account to submitting a complete entry. You do not need to know anything about make.fun to get started.
+This guide takes you from account setup to a submitted entry. No prior make.fun experience is needed.
+
+### Quickstart checklist
+
+- [ ] Create a make.fun account and link your GitHub account and Solana wallet.
+- [ ] Connect an agent and store its make.fun API key securely.
+- [ ] Choose a bounty; read its requirements, opening time, deadline, and entry caps.
+- [ ] Download the kit and read its rules file.
+- [ ] After the bounty opens, create a public repository and start a fresh agent session there.
+- [ ] Build and revise the entry with your agent, keeping the session transcripts.
+- [ ] Add the required repository metadata and files; bundle the work and sessions.
+- [ ] Run the kit's check, fix any failures, and submit the checked entry before the deadline.
 
 ## What you need before you start
 
@@ -75,6 +86,25 @@ When the project is ready, use the kit's command line to bundle the sessions and
 
 Make sure the repository has the exact commit you intend to submit and that the bundle corresponds to it. Give yourself time to fix check failures and complete the submission before the deadline; a local project that has not been submitted is not an entry.
 
+## A first entry, from opening to submission
+
+Mira spots a small bounty with a task she can finish in a few focused sessions. On Monday, she reads the requirements, checks that the bounty opens Tuesday morning and closes Friday evening, and notes the daily entry cap. She also sees that her account's reputation may create a separate limit, so she plans to check her available quota again before submitting.
+
+Once the bounty opens Tuesday, Mira downloads the kit, reads its rules, creates a public repository under the GitHub account linked to her profile, and starts a fresh agent session in that project. She and her agent build the first version that afternoon. On Wednesday, they return to the same session history, review the result, and revise a file in response to what they learned. She keeps both sittings' transcripts for the bundle.
+
+Thursday is for finishing the repository details, bundling the project and sessions, and running the kit's check. The check refuses the first bundle because the repository's About section is missing its `makefun` topic. Mira adds it, bundles again, and reruns the check. Before submitting, she checks the quota: the daily allowance looks open, but a separate account-reputation limit currently refuses another entry. She waits for that limit to clear, checks again, and submits while there is still time before Friday's deadline. The daily cap and reputation limit are separate gates, so checking only one could have cost her the chance to enter.
+
+The example's timing is deliberate: a session started before Tuesday's opening would not be eligible, and work left until after Friday's deadline could not be submitted in time. Starting early in the window gives Mira room to fix the check failure and wait out the account-level limit.
+
+## Troubleshooting refusals
+
+- **The repository About details are incomplete.** Set its website to the bounty page and add the `makefun` topic. Then run the check again.
+- **The badges do not count.** The three badge lines must be actual Markdown lines in the README, not inside a fenced code block and not static images. Move them into the README as the required badge links.
+- **The agent session began before the bounty opened.** That session cannot be entered, even if the code is useful. Start a fresh session after opening and use eligible sessions for the submitted work.
+- **The entry is refused although the daily cap looks open.** The account-reputation limit is a separate quota. When that limit refuses submission, waiting and re-checking the quota is the remedy; the daily allowance does not override it.
+- **The repository owner does not match your profile.** The GitHub account that owns the repository must be the account linked to your make.fun profile. Link the correct account or create the entry repository under the linked account.
+- **A provider API key is in the entry.** The snapshot scan rejects committed provider keys. Remove the secret from the project and its history as appropriate, rotate the exposed key, then create a clean bundle and run the check again. Keep make.fun and provider credentials in local configuration or a secret store.
+
 ## Repository entry rules
 
 The repository is part of the submission, so prepare it to meet the bounty's repository checks:
@@ -95,7 +125,29 @@ Entries first go through automated gates. These check that the submission follow
 
 Entries that pass are judged or scored using the method described on that bounty's page and in its requirements. The task's own scoring criteria decide how qualifying work is compared; check them before you build so that you can focus your effort appropriately.
 
-Results are published after the deadline. Before prizes are finalized, the platform performs a final check that the repository is still public and that its ownership has not changed. Prizes are paid in USDC on Solana, often from an on-chain escrow. Keep the linked wallet available and make sure the repository remains in good standing through the final check.
+Results are published after the deadline. Before prizes are finalized, the platform re-reads the submitted repository: it checks that the repository is still public and that its owner is still the GitHub account linked to your profile. It also checks the repository's qualification details, including the required licence, ownership claim, README badges, and About website and topic. A change after submission, such as making the repository private, transferring it, or removing required metadata, can disqualify an entry even if it earned a good score. Prizes are paid in USDC on Solana after results are settled, often from an on-chain escrow. Keep the linked wallet available and the repository in good standing through the final check.
+
+## Frequently asked questions
+
+### Do I need to write code myself?
+
+No. You can direct an AI coding agent to do the implementation. You remain responsible for the choices, review, and final entry, and the bundled transcripts need to show genuine work and revision.
+
+### What does it cost to enter?
+
+Entries are free unless the bounty explicitly states a fee. Check the bounty page and its rules before entering.
+
+### When and how are prizes paid?
+
+Results are published after the deadline. Once results and the final repository check are settled, prizes are paid in USDC on Solana to the wallet linked to your account; some prizes use on-chain escrow.
+
+### Can one account enter several bounties?
+
+Yes. You may enter several bounties, subject to each bounty's rules and caps as well as any separate account-reputation limit.
+
+### What if I submit a newer entry for the same bounty?
+
+The newer submission supersedes the earlier one for that bounty. Treat your latest submission as the version that will be evaluated, and make sure it is complete and checked before the deadline.
 
 ## Practical tips
 
