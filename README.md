@@ -57,6 +57,12 @@ Browse the [bounty page](https://make.fun/bounty/bring-the-humans-02) and open t
 
 Unpack the kit and read its rules file all the way through before building. The bounty's requirements and kit explain the specific commands and any additional constraints for that competition.
 
+## Choosing your first bounty
+
+For a first entry, start small rather than chasing the biggest prize. Compare the prize with the deadline and the time the task will honestly take you; a manageable task you can finish and check is a better first experience than an ambitious one that runs out of time. Before committing, inspect the kit and requirements, make sure you understand the deliverable, and avoid bounties whose prerequisites you do not have.
+
+For example, a modest interface fix with a clear screenshot deliverable, a week to work, and a kit you can run is a friendly first choice. A larger prize for a specialized machine learning feature can also be reasonable if you already know the tools and the task is clear. A short-deadline bounty that requires hardware, data, or credentials you do not have is risky, even if its prize is tempting.
+
 ## Build an entry
 
 Wait until the bounty opens before starting the agent session you intend to submit. Sessions from before the competition window cannot be entered, even if the code is useful. Start a fresh session after opening, in the project directory where you will build your entry.
@@ -96,6 +102,8 @@ Thursday is for finishing the repository details, bundling the project and sessi
 
 The example's timing is deliberate: a session started before Tuesday's opening would not be eligible, and work left until after Friday's deadline could not be submitted in time. Starting early in the window gives Mira room to fix the check failure and wait out the account-level limit.
 
+Mira also avoids a common beginner mistake: forgetting the repository's About details. She adds the bounty website and `makefun` topic before bundling, then checks them again when the kit reports a problem.
+
 ## Troubleshooting refusals
 
 - **The repository About details are incomplete.** Set its website to the bounty page and add the `makefun` topic. Then run the check again.
@@ -127,6 +135,12 @@ Entries that pass are judged or scored using the method described on that bounty
 
 Results are published after the deadline. Before prizes are finalized, the platform re-reads the submitted repository: it checks that the repository is still public and that its owner is still the GitHub account linked to your profile. It also checks the repository's qualification details, including the required licence, ownership claim, README badges, and About website and topic. A change after submission, such as making the repository private, transferring it, or removing required metadata, can disqualify an entry even if it earned a good score. Prizes are paid in USDC on Solana after results are settled, often from an on-chain escrow. Keep the linked wallet available and the repository in good standing through the final check.
 
+## After you submit
+
+While you wait, remember that results are published after the deadline. The platform re-checks that your repository is still public and its ownership has not changed. If you submit a newer entry for the same bounty, it supersedes the older one, so the last submission before the deadline is the one that counts. Prizes are paid in USDC on Solana to your linked wallet, sometimes from escrow. Keep the repository public and in good standing until results are settled.
+
+If a result looks wrong, re-read the bounty page and its checks, then use the platform's own support or feedback route to ask about it rather than resubmitting blindly.
+
 ## Frequently asked questions
 
 ### Do I need to write code myself?
@@ -148,6 +162,18 @@ Yes. You may enter several bounties, subject to each bounty's rules and caps as 
 ### What if I submit a newer entry for the same bounty?
 
 The newer submission supersedes the earlier one for that bounty. Treat your latest submission as the version that will be evaluated, and make sure it is complete and checked before the deadline.
+
+## Glossary
+
+- **Bounty:** A posted task with requirements, a deadline, and a prize for qualifying work.
+- **Kit:** The downloaded files and command line tools that explain and check how to enter a bounty.
+- **Escrow:** Funds held in a smart contract until the bounty's payout conditions are met.
+- **Transcript bundle:** The packaged project and agent-session records submitted as evidence of how the work was made.
+- **Authorship gate:** A check that the submitted sessions show the entry was genuinely created and revised during the bounty.
+- **Entry cap:** A limit on how many submissions an account may make in a set period or overall.
+- **Reputation limit:** A separate account-based limit on submissions that depends on reputation.
+- **Referral link:** A personal signup URL that credits the referring account when someone joins through it.
+- **Supersede:** To replace an earlier submission with a newer one, which becomes the version that counts.
 
 ## Practical tips
 
